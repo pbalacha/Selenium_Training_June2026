@@ -64,7 +64,7 @@ public class Actions_Practice_Mouse_Keyboard {
 	
 		//Thread.sleep(2000);
 		
-	//driver.quit();
+	driver.quit();
 		
 		
 	}
