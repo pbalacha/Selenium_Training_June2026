@@ -25,6 +25,15 @@ public class DragAndDropBy {
 		
 		//wait.until(ExpectedConditions.elementToBeClickable(sliderIcon));
 	
+		Actions moveSlider = new Actions(driver);
+		moveSlider.moveToElement(sliderIcon)
+		          .clickAndHold(sliderIcon)
+		          .pause(Duration.ofMillis(300)) // Gives browser time to register hold
+		          .moveByOffset(50, 0)           // Moves 50 pixels to the right
+		          .pause(Duration.ofMillis(300)) // Gives browser time to process position
+		          .release()
+		          .build()
+		          .perform();
 
 		
 		driver.quit();
